@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import "../styles/Header.scss";
 
 const Header = () => {
   return (
-    <div className="Header">
+    <header className="Header">
       <span>점심의 민족</span>
       <div>
         <Link to="/" className="menu-item">
@@ -12,10 +13,10 @@ const Header = () => {
           GAME
         </Link>
         <Link to="/login" className="menu-item">
-          Login
+          로그인/회원가입
         </Link>
       </div>
-    </div>
+    </header>
   );
 };
 
