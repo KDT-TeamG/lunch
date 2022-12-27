@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
-import Search from "../components/Search";
-import Main from "../components/Main";
+import Search from "../components//MainPage/Search";
+import Main from "../components/MainPage/Main";
 import Header from "../components/Header";
 import Login from "../components/MainPage/Login";
 
