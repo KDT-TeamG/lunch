@@ -1,0 +1,27 @@
+@import "./utils";
+
+.Login {
+  width: 90vw;
+  height: 500px;
+  background-color: white;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .close {
+    position: relative;
+    float: right;
+  }
+}
+
+// 모달 실행 시 배경
+.LoginContents {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.482);
+}

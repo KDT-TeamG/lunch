@@ -4,7 +4,6 @@ import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import GamePage from "./pages/GamePage";
-import Login from "./pages/Login";
 import MainPage from "./pages/MainPage";
 import NotFound from "./pages/NotFound";
 
@@ -42,7 +41,6 @@ function App() {
       road_address_name: "주소",
     },
   ]);
-  console.log(cardItems);
 
   return (
     <div className="App">
@@ -51,7 +49,6 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage cardItems={cardItems} />} />
           <Route path="/game" element={<GamePage />} />
-          <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
