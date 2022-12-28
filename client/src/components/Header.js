@@ -12,8 +12,8 @@ const Header = ({ showModal }) => {
         <Link to="/game" className="menu-item">
           GAME
         </Link>
-        <div className="menu-item" onClick={showModal}>
-          로그인/회원가입
+        <div className="menu-item loginBtn" onClick={showModal}>
+          로그인
         </div>
       </div>
     </header>

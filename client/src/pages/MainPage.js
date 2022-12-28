@@ -13,7 +13,6 @@ const MainPage = (props) => {
   };
 
   const { cardItems } = props;
-  console.log(props);
 
   return (
     <main className="MainPage">
