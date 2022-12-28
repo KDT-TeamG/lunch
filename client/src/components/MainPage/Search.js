@@ -1,3 +1,4 @@
+import React from "react";
 import "../../styles/Search.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
