@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
+// import Header from "../Header";
 import "../../styles/Login.scss";
 
 const Login = ({ setLoginOpen }) => {
