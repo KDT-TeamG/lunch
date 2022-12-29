@@ -18,8 +18,16 @@
 
   .menu-items {
     display: flex;
+    align-items: center;
   }
   .menu-item {
     margin: 0 8px;
+    cursor: pointer;
+  }
+
+  .loginBtn {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
   }
 }
