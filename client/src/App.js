@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import "semantic-ui-css/semantic.min.css";
+
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import GamePage from "./pages/GamePage";
