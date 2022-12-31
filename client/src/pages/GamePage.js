@@ -5,6 +5,7 @@ import Login from "../components/MainPage/Login";
 import { Button } from "semantic-ui-react";
 import { useState } from "react";
 import "../styles/GamePage.scss";
+// import "semantic-ui-css/semantic.min.css";
 
 const GamePage = () => {
   const [loginOpen, setLoginOpen] = useState(false);
