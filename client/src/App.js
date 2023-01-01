@@ -11,7 +11,7 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   // 임시데이터
-  const [cardItems, setCardItems] = useState([
+  const [cardItems] = useState([
     {
       img: "사진 들어갈 곳",
       place_name: "음식점 명",
