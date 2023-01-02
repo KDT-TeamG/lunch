@@ -23,6 +23,11 @@
   .menu-item {
     margin: 0 8px;
     cursor: pointer;
+
+    &:hover {
+      color: #faab78;
+      text-shadow: 2px 2px 2px #FAAB78;
+    }
   }
 
   .loginBtn {

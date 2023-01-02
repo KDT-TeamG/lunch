@@ -8,8 +8,10 @@ $bdrds: 3px;
 $white: #fff;
 $black: #000;
 $gray: #ccc;
-$salmon: #e8716d;
+// $salmon: #e8716d;
+$salmon: #ffab78;
 $smoky-black: #222222;
+$smoky-black: #E8f3d6;
 
 $ff: "Montserrat", sans-serif;
 $ff-body: 12px;
@@ -149,7 +151,7 @@ input {
 .user_options-unregistered {
   width: 50%;
   padding: 85px 45px;
-  color: $white;
+  color: $salmon;
   font-weight: $ff-light;
 }
 
@@ -173,7 +175,7 @@ input {
   border-radius: $bdrds;
   padding: 10px 30px;
 
-  color: $white;
+  color: $black;
   text-transform: uppercase;
   line-height: 1em;
   letter-spacing: 0.2rem;

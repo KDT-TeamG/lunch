@@ -35,20 +35,14 @@
     width: 100vw;
     height: 100vh;
   }
-  //   section {
-  //     width: 100vw;
-  //     height: 30vh;
-  //     margin: 0;
-  //     padding: 0;
-  //   position: absolute;
-  //   overflow-x: hidden;
-  //   overflow-y: auto;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   }
+
   .Game1 {
     //   background-color: bisque;
-    height: 40vh;
+    display: grid;
+    grid-template-columns: [left] 50vw [right] 50vw;
+    // height: 40vh;
+    grid-template-rows: 40vh;
+
     background: #071a1e;
     background: -moz-linear-gradient(top, #071a1e 0%, #274249 100%);
     background: -webkit-gradient(
@@ -61,7 +55,13 @@
     background: -webkit-linear-gradient(top, #071a1e 0%, #274249 100%);
     background: linear-gradient(to bottom, #071a1e 0%, #274249 100%);
     color: white;
+    .Dice {
+      float: left;
+      margin: 0 auto;
+      scale: 0.5;
+    }
     .TextArea {
+      float: right;
       margin-top: 1%;
       margin-right: 10%;
       float: right;

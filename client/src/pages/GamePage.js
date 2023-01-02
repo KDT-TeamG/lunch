@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Login from "../components/MainPage/Login";
+import Dice from "../components/Dice";
 // import "semantic-ui-css/semantic.min.css";
 import { Button } from "semantic-ui-react";
 import { useState } from "react";
@@ -17,6 +18,7 @@ const GamePage = () => {
       <Header showModal={showModal} />
       {loginOpen && <Login setLoginOpen={setLoginOpen} />}
       <div className="Game1">
+        <Dice />
         <div className="TextArea">
           <p>
             주사위 게임 설명란
