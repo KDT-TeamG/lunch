@@ -4,7 +4,7 @@ import "./App.css";
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import GamePage from "./pages/GamePage";
+import GamePage2 from "./pages/GamePage2";
 import MainPage from "./pages/MainPage";
 import NotFound from "./pages/NotFound";
 
@@ -49,7 +49,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<MainPage cardItems={cardItems} />} />
-          <Route path="/game" element={<GamePage />} />
+          <Route path="/game" element={<GamePage2 />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
