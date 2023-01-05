@@ -2,17 +2,18 @@ import React from "react";
 import Header from "../components/Header";
 import Login from "../components/MainPage/Login";
 import Dice from "../components/Dice";
-// import "semantic-ui-css/semantic.min.css";
 import { Grid, Button } from "semantic-ui-react";
 import { useState } from "react";
 import "../styles/GamePage2.scss";
-
 const GamePage2 = () => {
   const [loginOpen, setLoginOpen] = useState(false);
 
   const showModal = () => {
     setLoginOpen(true);
   };
+
+  const couponImg = "../../public/images/coupon.png";
+
   return (
     <div className="GamePage2">
       <Header showModal={showModal} />
@@ -32,7 +33,7 @@ const GamePage2 = () => {
             </Button>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row>
+        <Grid.Row className="game2">
           <Grid.Column></Grid.Column>
           <Grid.Column>
             <div className="gamepage__textArea">
@@ -44,7 +45,7 @@ const GamePage2 = () => {
             </Button>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row>
+        <Grid.Row className="game3">
           <Grid.Column></Grid.Column>
           <Grid.Column>
             <div className="gamepage__textArea">
