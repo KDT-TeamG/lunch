@@ -3,7 +3,8 @@ import { Menu, Segment, Form, Button } from "semantic-ui-react";
 import "../styles/Login.scss";
 
 const LoginPage = () => {
-  const ref = useRef();
+  const loginForm = useRef();
+  const signupForm = useRef();
   const [activeItem, setActiveItem] = useState("login");
   //   const handleItemClick = (e, { name }) => {
   //     setActiveItem(name);
@@ -11,10 +12,14 @@ const LoginPage = () => {
 
   const loginShow = (e, { name }) => {
     setActiveItem(name);
+    signupForm.current.style.display = "none";
+    loginForm.current.style.display = "block";
   };
 
   const signupShow = (e, { name }) => {
     setActiveItem(name);
+    loginForm.current.style.display = "none";
+    signupForm.current.style.display = "block";
   };
 
   return (
@@ -38,40 +43,44 @@ const LoginPage = () => {
         </Menu.Item>
       </Menu>
 
-      <Segment className="login_form" onClick={loginShow} ref={ref}>
-        <Form>
-          <Form.Field className="id">
-            <label>ID</label>
-            <input placeholder="ID"></input>
-          </Form.Field>
-          <Form.Field className="pw">
-            <label>Password</label>
-            <input type="password" placeholder="PASSWORD"></input>
-          </Form.Field>
-          <Button type="submit" className="login_submit">
-            Submit
-          </Button>
-        </Form>
-      </Segment>
-      <Segment className="signup_form d-none" onClick={signupShow} ref={ref}>
-        <Form>
-          <Form.Field className="id">
-            <label>Name</label>
-            <input placeholder="ID"></input>
-          </Form.Field>
-          <Form.Field className="id">
-            <label>ID</label>
-            <input placeholder="ID"></input>
-          </Form.Field>
-          <Form.Field className="pw">
-            <label>Password</label>
-            <input type="password" placeholder="PASSWORD"></input>
-          </Form.Field>
-          <Button type="submit" className="login_submit">
-            Submit
-          </Button>
-        </Form>
-      </Segment>
+      <div className="login_form" ref={loginForm}>
+        <Segment>
+          <Form>
+            <Form.Field className="id">
+              <label>ID</label>
+              <input placeholder="ID"></input>
+            </Form.Field>
+            <Form.Field className="pw">
+              <label>Password</label>
+              <input type="password" placeholder="PASSWORD"></input>
+            </Form.Field>
+            <Button type="submit" className="login_submit">
+              Login
+            </Button>
+          </Form>
+        </Segment>
+      </div>
+      <div className="signup_form d-none" ref={signupForm}>
+        <Segment>
+          <Form>
+            <Form.Field className="id">
+              <label>Name</label>
+              <input placeholder="Name"></input>
+            </Form.Field>
+            <Form.Field className="id">
+              <label>ID</label>
+              <input placeholder="ID"></input>
+            </Form.Field>
+            <Form.Field className="pw">
+              <label>Password</label>
+              <input type="password" placeholder="PASSWORD"></input>
+            </Form.Field>
+            <Button type="submit" className="login_submit">
+              Sign up
+            </Button>
+          </Form>
+        </Segment>
+      </div>
     </section>
   );
 };

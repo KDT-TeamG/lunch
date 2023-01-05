@@ -1,9 +1,18 @@
 .LoginPage {
+  position: relative;
   width: 30vw;
-  margin: auto;
+  min-width: 370px;
+  margin: 200px auto;
 
   form {
     padding: 20px;
+  }
+}
+
+.login_form {
+  .form {
+    position: relative;
+    top: 10%;
   }
 }
 
@@ -16,4 +25,8 @@
 
 .d-none {
   display: none;
+}
+
+.segment {
+  height: 350px;
 }
