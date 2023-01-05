@@ -21,9 +21,9 @@ const Header = ({ showModal }) => {
         <Link to="/game" className="menu-item">
           GAME
         </Link>
-        <div className="menu-item loginBtn" onClick={showModal}>
+        <Link to="/login" className="menu-item loginBtn">
           로그인
-        </div>
+        </Link>
       </div>
     </header>
   );

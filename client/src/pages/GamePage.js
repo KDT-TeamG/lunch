@@ -1,20 +1,12 @@
 import React from "react";
 import Header from "../components/Header";
-import Login from "../components/MainPage/Login";
 import { Button } from "semantic-ui-react";
-import { useState } from "react";
 import "../styles/GamePage.scss";
 
 const GamePage = () => {
-  const [loginOpen, setLoginOpen] = useState(false);
-
-  const showModal = () => {
-    setLoginOpen(true);
-  };
   return (
     <div className="GamePage">
-      <Header showModal={showModal} />
-      {loginOpen && <Login setLoginOpen={setLoginOpen} />}
+      <Header />
       <div className="Game1">
         <div className="TextArea">
           <p>

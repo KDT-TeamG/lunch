@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import GamePage from "./pages/GamePage";
 import MainPage from "./pages/MainPage";
 import NotFound from "./pages/NotFound";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   // 임시데이터
@@ -50,6 +51,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage cardItems={cardItems} />} />
           <Route path="/game" element={<GamePage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
