@@ -32,48 +32,68 @@
 
   .gamepage {
     &__textArea {
-      // left: 50%;
       margin-left: 200px;
     }
   }
   .game2 {
     height: 500px;
+    position: relative;
+    display: flex;
+    // .ScratchCard {
+    //   z-index: -1;
+    //   position: absolute;
+    // }
+    &:hover {
+      cursor: url("../images/won_cursor.png"), auto;
+    }
+
+    .gamepage {
+      &__textArea {
+        // z-index: 3000;
+        position: absolute;
+        margin-right: 225px;
+        margin-top: 170px;
+        // align-items: center;
+        // position: absolute;
+        // justify-content: center;
+      }
+    }
     // background-color: #fcf9be;
 
-    .imgContainer {
-      width: 400px;
-      height: 2px;
-      background: #fcf9be;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+    // .imgContainer {
+    //   width: 400px;
+    //   height: 2px;
+    //   background: #fcf9be;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    // }
 
-    #couponImg {
-      position: absolute;
-      width: 220px;
-      height: auto;
-      z-index: 0;
-    }
-    #mouseImg {
-      position: relative;
-      z-index: 100;
-      rotate: -30deg;
-      -webkit-animation-name: zigzag;
-      animation-name: zigzag;
-      -webkit-animation-duration: 2s;
-      animation-duration: 2s;
-      -webkit-animation-timing-function: linear;
-      animation-timing-function: linear;
-      -webkit-animation-iteration-count: infinite;
-      animation-iteration-count: infinite;
-      -webkit-animation-direction: normal;
-      animation-direction: normal;
-    }
+    // #couponImg {
+    //   position: absolute;
+    //   width: 220px;
+    //   height: auto;
+    //   z-index: 0;
+    // }
+    // #mouseImg {
+    //   position: relative;
+    //   z-index: 100;
+    //   rotate: -30deg;
+    //   -webkit-animation-name: zigzag;
+    //   animation-name: zigzag;
+    //   -webkit-animation-duration: 2s;
+    //   animation-duration: 2s;
+    //   -webkit-animation-timing-function: linear;
+    //   animation-timing-function: linear;
+    //   -webkit-animation-iteration-count: infinite;
+    //   animation-iteration-count: infinite;
+    //   -webkit-animation-direction: normal;
+    //   animation-direction: normal;
+    // }
   }
   .game3 {
-    height: 40vh;
+    height: 500px;
   }
 
   @-webkit-keyframes zigzag {

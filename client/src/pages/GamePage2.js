@@ -4,7 +4,7 @@ import Login from "../components/MainPage/Login";
 import Dice from "../components/Dice";
 import { Grid, Image, Button } from "semantic-ui-react";
 import { useState } from "react";
-import couponImg from "../images/coupon.png";
+import couponImg from "../images/coupon3.png";
 import mouseImg from "../images/mouse.png";
 import mouseImg2 from "../images/wireless-mouse.png";
 import yayImg from "../images/celebration.png";
@@ -12,6 +12,7 @@ import yayImg2 from "../images/celebration2.png";
 import dice3 from "../images/dice3.png";
 import map from "../images/map.png";
 import "../styles/GamePage2.scss";
+import ScratchCard from "../components/Scratch";
 
 const GamePage2 = () => {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -40,10 +41,11 @@ const GamePage2 = () => {
             </div>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row className="game2">
-          <Grid.Column>
-            {/* <Image src={map} className="bgimgMap" /> */}
-            {/* <div className="imgContainer">
+        <Grid.Row className="game2" centered>
+          {/* <ScratchCard /> */}
+          {/* <Grid.Column> */}
+          {/* <Image src={map} className="bgimgMap" /> */}
+          {/* <div className="imgContainer">
             
               <Image
                 src={couponImg}
@@ -59,20 +61,22 @@ const GamePage2 = () => {
                 id="yayImg"
               />
             </div> */}
-          </Grid.Column>
-          <Grid.Column verticalAlign="middle">
-            <div className="gamepage__textArea">
-              <h1 className="gamepage__textArea__title">복권 긁기 게임</h1>
-              <h3 className="gamepage__textArea__desc">설명설명설명</h3>
-              <Button floated="left" size="huge">
-                스크래치 START
-              </Button>
-            </div>
-          </Grid.Column>
+          <div className="imgContainer">
+            <Image src={couponImg} />
+          </div>
+          <div className="gamepage__textArea">
+            <h1 className="gamepage__textArea__title">복권 긁기 게임</h1>
+            <h3 className="gamepage__textArea__desc">설명설명설명</h3>
+            <Button floated="left" size="huge">
+              스크래치 START
+            </Button>
+          </div>
+          {/* </div> */}
+          {/* </Grid.Column> */}
+          {/* <Grid.Column verticalAlign="middle"></Grid.Column> */}
         </Grid.Row>
         <Grid.Row className="game3">
-          <Grid.Column></Grid.Column>
-          <Grid.Column>
+          <Grid.Column verticalAlign="middle">
             <div className="gamepage__textArea">
               <h1 className="gamepage__textArea__title">
                 이걸로 계산해주세요!
@@ -83,6 +87,7 @@ const GamePage2 = () => {
               </Button>
             </div>
           </Grid.Column>
+          <Grid.Column></Grid.Column>
         </Grid.Row>
       </Grid>
       <div className="BtnArea"></div>
