@@ -1,46 +1,48 @@
 @import "./utils";
 
-.SearchBar {
+.Search {
+  width: 88vw;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.search_area {
   display: flex;
-  justify-content: center;
-  position: relative;
-  margin: 100px auto 100px auto;
-  padding: 2px;
-  border-bottom: 2px solid black;
-  width: 40%;
+  justify-content: space-between;
+  padding: 0 30px;
+}
 
-  input {
-    width: 700px;
-    height: 50px;
-    padding-left: 10px;
-    border: none;
-  }
+.ui.search .prompt {
+  width: 300px;
+  cursor: pointer;
+}
 
-  button {
-    width: 50px;
-    background-color: white;
-    border: none;
-  }
+ul.filter_list {
+  display: flex;
+}
+
+ul.filter_list > li {
+  margin: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .Cards {
-  overflow: scroll;
+  overflow-x: scroll;
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
   padding: 15px;
-  width: 85vw;
   height: 500px;
+  margin-top: 50px;
 }
 
 .CardList {
-  text-align: center;
   width: 270px;
   height: 300px;
   margin: 10px;
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid black;
 
   .items_img {
     width: 100%;
@@ -53,7 +55,19 @@
   }
 }
 
+.ui.card:first-child {
+  margin-top: auto;
+}
+
+.ui.card:last-child {
+  margin-bottom: auto;
+}
+
+.ui.card {
+  margin: 1rem 0.5rem;
+}
+
 #Search {
-  height: 10px;
+  height: 100px;
   width: 100%;
 }

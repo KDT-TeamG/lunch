@@ -16,31 +16,37 @@ function App() {
       img: "사진 들어갈 곳",
       place_name: "음식점 명",
       road_address_name: "주소",
+      category: "한식",
     },
     {
       img: "사진 들어갈 곳",
       place_name: "음식점 명",
       road_address_name: "주소",
+      category: "한식",
     },
     {
       img: "사진 들어갈 곳",
       place_name: "음식점 명",
       road_address_name: "주소",
+      category: "중식",
     },
     {
       img: "사진 들어갈 곳",
       place_name: "음식점 명",
       road_address_name: "주소",
+      category: "일식",
     },
     {
       img: "사진 들어갈 곳",
       place_name: "음식점 명",
       road_address_name: "주소",
+      category: "양식",
     },
     {
       img: "사진 들어갈 곳",
       place_name: "음식점 명",
       road_address_name: "주소",
+      category: "고기",
     },
   ]);
 
