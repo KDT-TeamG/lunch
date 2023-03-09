@@ -7,7 +7,7 @@ const Main = () => {
   const images = useRef([
     {
       id: "first",
-      backgroundImg: "images/carousel1.gif",
+      backgroundImg: "images/carousel2.gif",
       MoveBtnTxt: "검색하러 가기 >",
       link: "#Search",
       p: "음식점이 고민될 땐",
