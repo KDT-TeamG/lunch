@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 import { Card, Image, Search, Grid } from "semantic-ui-react";
 import "../../styles/Search.scss";
 
 const SearchScetion = (props) => {
   const { cardItems } = props;
+
+  const listItem = ["전체", "한식", "중식", "일식", "양식", "기타"];
+
+  const lists = useRef([]);
+
+  useEffect(() => {
+    console.log("lists", lists);
+    lists.current[0].classList.add("active");
+  }, [lists]);
+
+  const click = (e) => {
+    lists.current.forEach((item) => {
+      item.classList.remove("active");
+    });
+    e.target.classList.add("active");
+  };
 
   return (
     <section className="Search">
@@ -14,12 +30,15 @@ const SearchScetion = (props) => {
         {/* 검색바 */}
         <div className="filter">
           <ul className="filter_list">
-            <li>전체</li>
-            <li>한식</li>
-            <li>중식</li>
-            <li>일식</li>
-            <li>양식</li>
-            <li>기타</li>
+            {listItem.map((item, idx) => (
+              <li
+                key={idx}
+                onClick={click}
+                ref={(el) => (lists.current[idx] = el)}
+              >
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
         <div className="searchBar">
