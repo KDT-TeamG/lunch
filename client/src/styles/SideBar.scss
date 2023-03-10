@@ -1,0 +1,44 @@
+.sidebar {
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100%;
+  translate: 300px 0;
+  transition: 0.4s;
+}
+
+.sidebar.open {
+  translate: 0;
+  background-color: #faab78;
+}
+
+button {
+  background-color: #faab78;
+  color: #fff;
+  width: 30px;
+  position: absolute;
+  top: 100px;
+  left: -30px;
+}
+
+.user {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.userImg {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
