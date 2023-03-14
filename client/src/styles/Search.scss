@@ -30,8 +30,7 @@ ul.filter_list > li {
 
 .Cards {
   overflow-x: scroll;
-  display: flex;
-  flex-wrap: wrap;
+
   padding: 15px;
   height: 500px;
   margin-top: 50px;
@@ -40,6 +39,12 @@ ul.filter_list > li {
 // .CardList {
 
 // }
+
+.cardBox {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 40px;
+}
 
 .place_name {
   margin-top: 10px;

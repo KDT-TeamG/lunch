@@ -26,7 +26,7 @@ const SearchScetion = (props) => {
     e.target.classList.add("active");
     cards.current.forEach((list) => {
       if (list.childNodes[1].childNodes[1].innerText === e.target.innerText) {
-        list.parentNode.classList.remove("hidden");
+        return list.parentNode.classList.remove("hidden");
       } else if (e.target.innerText === "전체") {
         list.parentNode.classList.remove("hidden");
       } else {
@@ -64,50 +64,52 @@ const SearchScetion = (props) => {
       </div>
       {/* 음식점 리스트 */}
       <div className="Cards">
-        {cardItems.map((items, i) => {
-          return (
-            // <Card key={i}>
-            //   <div className="CardList" ref={(el) => (cards.current[i] = el)}>
-            //     <Image className="items_img" wrapped ui={false}>
-            //       {items.img}
-            //     </Image>
-            //     <Card.Content>
-            //       <Card.Header className="place_name">
-            //         {items.place_name}
-            //       </Card.Header>
-            //       <Card.Meta
-            //         className="category"
-            //         // ref={(el) => (cardsCategory.current[i] = el)}
-            //       >
-            //         {items.category}
-            //       </Card.Meta>
-            //       <Card.Description className="road_address_name">
-            //         {items.road_address_name}
-            //       </Card.Description>
-            //     </Card.Content>
-            //   </div>
-            // </Card>
-            <div className="card" key={i}>
-              <div className="CardList" ref={(el) => (cards.current[i] = el)}>
-                <div className="imgContent">
-                  <img src={items.img} className="items_img" alt="img" />
-                </div>
-                <div className="cardContent">
-                  <div className="place_name">{items.place_name}</div>
-                  <div
-                    className="category"
-                    ref={(el) => (cardsCategory.current[i] = el)}
-                  >
-                    {items.category}
+        <div className="cardBox">
+          {cardItems.map((items, i) => {
+            return (
+              // <Card key={i}>
+              //   <div className="CardList" ref={(el) => (cards.current[i] = el)}>
+              //     <Image className="items_img" wrapped ui={false}>
+              //       {items.img}
+              //     </Image>
+              //     <Card.Content>
+              //       <Card.Header className="place_name">
+              //         {items.place_name}
+              //       </Card.Header>
+              //       <Card.Meta
+              //         className="category"
+              //         // ref={(el) => (cardsCategory.current[i] = el)}
+              //       >
+              //         {items.category}
+              //       </Card.Meta>
+              //       <Card.Description className="road_address_name">
+              //         {items.road_address_name}
+              //       </Card.Description>
+              //     </Card.Content>
+              //   </div>
+              // </Card>
+              <div className="card" key={i}>
+                <div className="CardList" ref={(el) => (cards.current[i] = el)}>
+                  <div className="imgContent">
+                    <img src={items.img} className="items_img" alt="img" />
                   </div>
-                  <div className="road_address_name">
-                    {items.road_address_name}
+                  <div className="cardContent">
+                    <div className="place_name">{items.place_name}</div>
+                    <div
+                      className="category"
+                      ref={(el) => (cardsCategory.current[i] = el)}
+                    >
+                      {items.category}
+                    </div>
+                    <div className="road_address_name">
+                      {items.road_address_name}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );
