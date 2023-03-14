@@ -13,7 +13,7 @@ const SideBar = () => {
   return (
     <>
       <aside className={`sidebar ${isOpen ? "open" : ""}`}>
-        <button onClick={toggleSideBar}>
+        <button onClick={toggleSideBar} className="toggleSideBarBtn">
           <FontAwesomeIcon icon={faBars} size="2x" />
         </button>
         <nav className="navList">
