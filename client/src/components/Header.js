@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Header.scss";
 
-const Header = ({ showModal }) => {
+const Header = () => {
   const [time, setTime] = useState(new Date());
+
+  const logout = () => {
+    localStorage.clear();
+  };
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -21,9 +25,15 @@ const Header = ({ showModal }) => {
         <Link to="/game" className="menu-item">
           GAME
         </Link>
-        <Link to="/login" className="menu-item loginBtn">
-          로그인
-        </Link>
+        {localStorage.getItem("userId") == null ? (
+          <Link to="/login" className="menu-item loginBtn">
+            로그인
+          </Link>
+        ) : (
+          <div className="loginBtn" onClick={logout}>
+            로그아웃
+          </div>
+        )}
       </div>
     </header>
   );
