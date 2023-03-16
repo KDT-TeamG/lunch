@@ -6,9 +6,54 @@ const LoginPage = () => {
   const loginForm = useRef();
   const signupForm = useRef();
   const [activeItem, setActiveItem] = useState("login");
-  //   const handleItemClick = (e, { name }) => {
-  //     setActiveItem(name);
-  //   };
+
+  const signUpNameInput = useRef();
+  const signUpIdInput = useRef();
+  const signUpPwInput = useRef();
+
+  const loginIdInput = useRef();
+  const loginPwInput = useRef();
+
+  const userId = localStorage.getItem("userId");
+  const userPw = localStorage.getItem("userPw");
+
+  // localStorage 사용한 임시 회원가입
+  const signupBtnHandle = () => {
+    if (
+      signUpNameInput.current.value === "" ||
+      signUpIdInput.current.value === "" ||
+      signUpPwInput.current.value === ""
+    ) {
+      return alert("입력칸을 모두 채워주세요");
+    }
+    localStorage.setItem("userName", signUpNameInput.current.value);
+    localStorage.setItem("userId", signUpIdInput.current.value);
+    localStorage.setItem("userPw", signUpPwInput.current.value);
+    alert("회원가입 성공");
+    signUpNameInput.current.value = "";
+    signUpIdInput.current.value = "";
+    signUpPwInput.current.value = "";
+  };
+
+  // localStorage 사용한 임시 로그인
+  const loginBtnHandle = () => {
+    if (
+      loginIdInput.current.value === "" ||
+      loginPwInput.current.value === ""
+    ) {
+      return alert("입력칸을 모두 채워주세요");
+    }
+    if (
+      loginIdInput.current.value !== userId ||
+      loginPwInput.current.value !== userPw
+    ) {
+      return alert("아이디 또는 비밀번호를 확인해 주세요");
+    }
+    alert("로그인 성공");
+    loginIdInput.current.value = "";
+    loginPwInput.current.value = "";
+    window.location.href = "/";
+  };
 
   const loginShow = (e, { name }) => {
     setActiveItem(name);
@@ -48,13 +93,21 @@ const LoginPage = () => {
           <Form>
             <Form.Field className="id">
               <label>ID</label>
-              <input placeholder="ID"></input>
+              <input placeholder="ID" ref={loginIdInput}></input>
             </Form.Field>
             <Form.Field className="pw">
               <label>Password</label>
-              <input type="password" placeholder="PASSWORD"></input>
+              <input
+                type="password"
+                placeholder="PASSWORD"
+                ref={loginPwInput}
+              ></input>
             </Form.Field>
-            <Button type="submit" className="login_submit">
+            <Button
+              type="submit"
+              className="login_submit"
+              onClick={loginBtnHandle}
+            >
               Login
             </Button>
           </Form>
@@ -63,19 +116,27 @@ const LoginPage = () => {
       <div className="signup_form d-none" ref={signupForm}>
         <Segment>
           <Form>
-            <Form.Field className="id">
+            <Form.Field className="Name">
               <label>Name</label>
-              <input placeholder="Name"></input>
+              <input placeholder="Name" ref={signUpNameInput}></input>
             </Form.Field>
             <Form.Field className="id">
               <label>ID</label>
-              <input placeholder="ID"></input>
+              <input placeholder="ID" ref={signUpIdInput}></input>
             </Form.Field>
             <Form.Field className="pw">
               <label>Password</label>
-              <input type="password" placeholder="PASSWORD"></input>
+              <input
+                type="password"
+                placeholder="PASSWORD"
+                ref={signUpPwInput}
+              ></input>
             </Form.Field>
-            <Button type="submit" className="login_submit">
+            <Button
+              type="submit"
+              className="login_submit"
+              onClick={signupBtnHandle}
+            >
               Sign up
             </Button>
           </Form>
