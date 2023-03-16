@@ -10,14 +10,11 @@ const SearchScetion = (props) => {
 
   const lists = useRef([]);
   const cards = useRef([]);
-  const cardsCategory = useRef([]);
 
   useEffect(() => {
     console.log("lists", lists);
-    console.log();
-    console.log(cardsCategory);
     lists.current[0].classList.add("active");
-  }, [lists, cards, cardsCategory]);
+  }, [lists, cards]);
 
   const click = (e) => {
     lists.current.forEach((item) => {
@@ -95,12 +92,7 @@ const SearchScetion = (props) => {
                   </div>
                   <div className="cardContent">
                     <div className="place_name">{items.place_name}</div>
-                    <div
-                      className="category"
-                      ref={(el) => (cardsCategory.current[i] = el)}
-                    >
-                      {items.category}
-                    </div>
+                    <div className="category">{items.category}</div>
                     <div className="road_address_name">
                       {items.road_address_name}
                     </div>

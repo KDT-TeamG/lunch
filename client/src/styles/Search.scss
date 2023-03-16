@@ -36,10 +36,6 @@ ul.filter_list > li {
   margin-top: 50px;
 }
 
-// .CardList {
-
-// }
-
 .cardBox {
   display: flex;
   flex-wrap: wrap;
@@ -67,17 +63,14 @@ ul.filter_list > li {
   height: 300px;
   margin: 10px;
   padding: 5px;
-  border-radius: 5px;
   border: 1px solid black;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 5px 10px #a9a9a9;
+  }
 }
-
-// .card:first-child {
-//   margin-top: auto;
-// }
-
-// .card:last-child {
-//   margin-bottom: auto;
-// }
 
 .card {
   margin: 1rem 0.5rem;
