@@ -6,7 +6,7 @@ const Header = () => {
   const [time, setTime] = useState(new Date());
 
   const logout = () => {
-    localStorage.clear();
+    sessionStorage.clear();
   };
 
   useEffect(() => {
@@ -25,14 +25,14 @@ const Header = () => {
         <Link to="/game" className="menu-item">
           GAME
         </Link>
-        {localStorage.getItem("userId") == null ? (
+        {sessionStorage.getItem("userId") == null ? (
           <Link to="/login" className="menu-item loginBtn">
             로그인
           </Link>
         ) : (
-          <div className="loginBtn" onClick={logout}>
+          <button className="loginBtn" onClick={logout}>
             로그아웃
-          </div>
+          </button>
         )}
       </div>
     </header>
