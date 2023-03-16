@@ -19,7 +19,7 @@ const SideBar = () => {
         <nav className="navList">
           <div className="user">
             <img src="/images/user.png" alt="userImg" className="userImg" />
-            {localStorage.getItem("userId") == null ? (
+            {sessionStorage.getItem("userId") == null ? (
               <a href="/login">로그인 하러가기</a>
             ) : (
               <div>{localStorage.getItem("userName")}님</div>

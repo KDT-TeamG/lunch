@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Menu, Segment, Form, Button } from "semantic-ui-react";
 import "../styles/Login.scss";
 
@@ -50,9 +51,11 @@ const LoginPage = () => {
       return alert("아이디 또는 비밀번호를 확인해 주세요");
     }
     alert("로그인 성공");
+    sessionStorage.setItem("userId", loginIdInput.current.value);
+    sessionStorage.setItem("userPw", loginPwInput.current.value);
     loginIdInput.current.value = "";
     loginPwInput.current.value = "";
-    window.location.href = "/";
+    window.location.replace("/");
   };
 
   const loginShow = (e, { name }) => {
@@ -141,6 +144,9 @@ const LoginPage = () => {
             </Button>
           </Form>
         </Segment>
+      </div>
+      <div className="moveHome">
+        <Link to="/">홈으로 가기</Link>
       </div>
     </section>
   );

@@ -1,12 +1,10 @@
 import React from "react";
-import Header from "../components/Header";
 import { Button } from "semantic-ui-react";
 import "../styles/GamePage.scss";
 
 const GamePage = () => {
   return (
     <div className="GamePage">
-      <Header />
       <div className="Game1">
         <div className="TextArea">
           <p>
