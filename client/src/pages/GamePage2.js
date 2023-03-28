@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import Login from "../components/MainPage/Login";
+// import Login from "../components/MainPage/Login";
 import Dice from "../components/Dice";
 import { Grid, Image, Button } from "semantic-ui-react";
 import { useState } from "react";
@@ -10,6 +10,7 @@ import mouseImg2 from "../images/wireless-mouse.png";
 import yayImg from "../images/celebration.png";
 import yayImg2 from "../images/celebration2.png";
 import dice3 from "../images/dice3.png";
+import cardImg from "../images/credit-card1.png";
 import map from "../images/map.png";
 import "../styles/GamePage2.scss";
 import ScratchCard from "../components/Scratch";
@@ -24,7 +25,7 @@ const GamePage2 = () => {
   return (
     <div className="GamePage2">
       <Header showModal={showModal} />
-      {loginOpen && <Login setLoginOpen={setLoginOpen} />}
+      {/* {loginOpen && <Login setLoginOpen={setLoginOpen} />} */}
       <Grid container columns={2} stackable>
         <Grid.Row className="game1">
           <Grid.Column>
@@ -87,7 +88,23 @@ const GamePage2 = () => {
               </Button>
             </div>
           </Grid.Column>
-          <Grid.Column></Grid.Column>
+          <Grid.Column style={{ display: "flex" }} className="cards">
+            <Image
+              src={cardImg}
+              className="card card1"
+              draggable="false"
+            ></Image>
+            <Image
+              src={cardImg}
+              className="card card2"
+              draggable="false"
+            ></Image>
+            <Image
+              src={cardImg}
+              className="card card3"
+              draggable="false"
+            ></Image>
+          </Grid.Column>
         </Grid.Row>
       </Grid>
       <div className="BtnArea"></div>
