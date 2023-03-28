@@ -1,0 +1,15 @@
+.ScratchCard__Container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+}
+.ScratchCard__Canvas {
+  height: 500px;
+  width: auto;
+  z-index: 1;
+}
+.textArea {
+  margin-top: 150px;
+  z-index: 3;
+}
