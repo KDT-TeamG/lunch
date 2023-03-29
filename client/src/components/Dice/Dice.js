@@ -1,4 +1,4 @@
-import "../styles/Dice.scss";
+import "./Dice.scss";
 
 const Dice = () => {
   return (

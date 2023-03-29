@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import "../../styles/MainPage.scss";
+import "./Main.scss";
 
 const Main = () => {
   const images = useRef([
@@ -84,14 +84,6 @@ const Main = () => {
                 </div>
                 <div className="move">
                   <a href={img.link}>{img.MoveBtnTxt}</a>
-                  <div className="dots">
-                    {images.current.map((x, i) => (
-                      <div
-                        key={i}
-                        className={i === current ? "dot current" : "dot"}
-                      ></div>
-                    ))}
-                  </div>
                 </div>
               </div>
             ))}

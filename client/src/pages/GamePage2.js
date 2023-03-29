@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../components/Header";
-import Dice from "../components/Dice.js";
+import Header from "../components/Header/Header";
+import Dice from "../components/Dice/Dice.js";
 import { Grid, Image, Button } from "semantic-ui-react";
 import { useState } from "react";
 import couponImg from "../images/coupon3.png";
@@ -10,8 +10,8 @@ import yayImg from "../images/celebration.png";
 import yayImg2 from "../images/celebration2.png";
 import dice3 from "../images/dice3.png";
 import map from "../images/map.png";
-import "../styles/GamePage2.scss";
-import ScratchCard from "../components/Scratch";
+import "./GamePage2.scss";
+import ScratchCard from "../components/Scratch/Scratch";
 
 const GamePage2 = () => {
   return (

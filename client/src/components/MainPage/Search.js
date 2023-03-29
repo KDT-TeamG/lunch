@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
 import { Search, Grid } from "semantic-ui-react";
-import "../../styles/Search.scss";
+import "./Search.scss";
 
 const SearchScetion = (props) => {
   const { cardItems } = props;

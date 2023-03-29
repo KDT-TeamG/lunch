@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Segment, Form, Button } from "semantic-ui-react";
-import "../styles/Login.scss";
+import "./LoginPage.scss";
 
 const LoginPage = () => {
   const loginForm = useRef();
