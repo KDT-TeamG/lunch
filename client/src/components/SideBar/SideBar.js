@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import "../styles/SideBar.scss";
+import "./SideBar.scss";
 
 const SideBar = () => {
   const [isOpen, setIsOpen] = useState(false);

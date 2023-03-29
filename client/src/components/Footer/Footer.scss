@@ -1,4 +1,4 @@
-@import "./utils";
+@import "../../utils";
 
 .Footer {
   width: 100%;
@@ -13,6 +13,9 @@
   font-size: 2rem;
   font-weight: 700;
 
+  .logo {
+    color: black;
+  }
   img {
     width: 40px;
     margin-right: 10px;
@@ -22,11 +25,16 @@
     color: black;
   }
 }
+
 .contentsLink {
   display: flex;
   flex-direction: column;
   font-size: 1.2rem;
   font-weight: 700;
+
+  a {
+    color: black;
+  }
 
   a:hover {
     color: #faab78;

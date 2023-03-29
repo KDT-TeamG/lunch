@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Login from "../components/MainPage/Login";
-import Dice from "../components/Dice";
+import Dice from "../components/Dice/Dice";
 // import "semantic-ui-css/semantic.min.css";
 import { Button } from "semantic-ui-react";
-import "../styles/GamePage.scss";
+import "./GamePage.scss";
 
 const GamePage = () => {
   return (

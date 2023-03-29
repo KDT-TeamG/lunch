@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Header.scss";
+import "./Header.scss";
 
 const Header = () => {
   const [time, setTime] = useState(new Date());
@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header className="Header">
       <Link to="/" className="logo">
-        점심의 민족
+        맛ZIP
       </Link>
       <div className="menu-items">
         <div className="clock">{time.toLocaleTimeString()}</div>

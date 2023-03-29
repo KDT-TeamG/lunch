@@ -1,7 +1,7 @@
 import React from "react";
 import ScratchCard from "react-scratchcard";
-import couponCover from "../images/coupon3.png";
-import "../styles/Scratch.scss";
+import couponCover from "../../images/coupon3.png";
+import "./Scratch.scss";
 
 // const { useState } = React;
 const Scratch = () => {
@@ -31,7 +31,6 @@ const Scratch = () => {
         <h3>설명설명설명</h3>
       </div>
     </ScratchCard>
-
   );
 };
 export default Scratch;

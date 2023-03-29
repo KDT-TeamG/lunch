@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 import GamePage2 from "./pages/GamePage2";
 import MainPage from "./pages/MainPage";
 import NotFound from "./pages/NotFound";
