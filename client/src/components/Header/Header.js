@@ -30,7 +30,7 @@ const Header = () => {
             로그인
           </Link>
         ) : (
-          <button className="loginBtn" onClick={logout}>
+          <button className="menu-item logoutBtn" onClick={logout}>
             로그아웃
           </button>
         )}
