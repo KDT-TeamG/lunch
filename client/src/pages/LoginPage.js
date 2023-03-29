@@ -11,9 +11,10 @@ const LoginPage = () => {
   const signUpNameInput = useRef();
   const signUpIdInput = useRef();
   const signUpPwInput = useRef();
-
   const loginIdInput = useRef();
   const loginPwInput = useRef();
+  const signupElement = document.querySelector(".signup-alert");
+  const loginElement = document.querySelector(".login-alert");
 
   const userId = localStorage.getItem("userId");
   const userPw = localStorage.getItem("userPw");
@@ -25,7 +26,7 @@ const LoginPage = () => {
       signUpIdInput.current.value === "" ||
       signUpPwInput.current.value === ""
     ) {
-      return alert("입력칸을 모두 채워주세요");
+      return (signupElement.innerText = "입력칸을 모두 채워주세요");
     }
     localStorage.setItem("userName", signUpNameInput.current.value);
     localStorage.setItem("userId", signUpIdInput.current.value);
@@ -42,13 +43,13 @@ const LoginPage = () => {
       loginIdInput.current.value === "" ||
       loginPwInput.current.value === ""
     ) {
-      return alert("입력칸을 모두 채워주세요");
+      return (loginElement.innerText = "입력칸을 모두 채워주세요");
     }
     if (
       loginIdInput.current.value !== userId ||
       loginPwInput.current.value !== userPw
     ) {
-      return alert("아이디 또는 비밀번호를 확인해 주세요");
+      return (loginElement.innerText = "아이디 또는 비밀번호를 확인해 주세요");
     }
     alert("로그인 성공");
     sessionStorage.setItem("userId", loginIdInput.current.value);
@@ -60,12 +61,19 @@ const LoginPage = () => {
 
   const loginShow = (e, { name }) => {
     setActiveItem(name);
+    signupElement.innerText = "";
+    signUpNameInput.current.value = "";
+    signUpIdInput.current.value = "";
+    signUpPwInput.current.value = "";
     signupForm.current.style.display = "none";
     loginForm.current.style.display = "block";
   };
 
   const signupShow = (e, { name }) => {
     setActiveItem(name);
+    loginElement.innerText = "";
+    loginIdInput.current.value = "";
+    loginPwInput.current.value = "";
     loginForm.current.style.display = "none";
     signupForm.current.style.display = "block";
   };
@@ -105,6 +113,7 @@ const LoginPage = () => {
                 placeholder="PASSWORD"
                 ref={loginPwInput}
               ></input>
+              <div className="login-alert"></div>
             </Form.Field>
             <Button
               type="submit"
@@ -134,6 +143,7 @@ const LoginPage = () => {
                 placeholder="PASSWORD"
                 ref={signUpPwInput}
               ></input>
+              <div className="signup-alert"></div>
             </Form.Field>
             <Button
               type="submit"
