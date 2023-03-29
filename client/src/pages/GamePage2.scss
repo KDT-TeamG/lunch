@@ -94,6 +94,54 @@
   }
   .game3 {
     height: 500px;
+    overflow: hidden;
+  }
+
+  .card {
+    margin: 0em 0.5em 0em 0.5em;
+  }
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      width: 10em;
+      height: 15em;
+      background-color: transparent;
+      object-fit: cover;
+      margin: 0;
+      padding: 0;
+      border-radius: 8%;
+    }
+  }
+
+  //Card rotate//
+
+  .card1 {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    transform: rotate(337deg);
+    animation: cardAnimation1 5s infinite;
+    animation-delay: 0s;
+    // z-index: 1;
+  }
+
+  .card2 {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    transform: rotate(0deg);
+    animation: cardAnimation2 5s infinite;
+    animation-delay: 2s;
+    z-index: 1;
+  }
+
+  .card3 {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    transform: rotate(22deg);
+    animation: cardAnimation3 5s infinite;
+    animation-delay: 4s;
   }
 
   @-webkit-keyframes zigzag {
@@ -139,6 +187,40 @@
     100% {
       left: 110px;
       top: 40px;
+    }
+  }
+
+  @keyframes cardAnimation1 {
+    0% {
+      transform: rotate(337deg) translateY(0%);
+    }
+    50% {
+      transform: rotate(337deg) translateY(-40%);
+    }
+    100% {
+      transform: rotate(337deg) translateY(0%);
+    }
+  }
+  @keyframes cardAnimation2 {
+    0% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(-40%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  @keyframes cardAnimation3 {
+    0% {
+      transform: rotate(22deg) translateY(0%);
+    }
+    50% {
+      transform: rotate(22deg) translateY(-40%);
+    }
+    100% {
+      transform: rotate(22deg) translateY(0%);
     }
   }
 }
