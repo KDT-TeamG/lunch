@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header className="Header">
       <Link to="/" className="logo">
-        점심의 민족
+        맛ZIP
       </Link>
       <div className="menu-items">
         <div className="clock">{time.toLocaleTimeString()}</div>

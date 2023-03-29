@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import Login from "../components/MainPage/Login";
-import Dice from "../components/Dice";
+import Dice from "../components/Dice.js";
 import { Grid, Image, Button } from "semantic-ui-react";
 import { useState } from "react";
 import couponImg from "../images/coupon3.png";
@@ -15,16 +14,9 @@ import "../styles/GamePage2.scss";
 import ScratchCard from "../components/Scratch";
 
 const GamePage2 = () => {
-  const [loginOpen, setLoginOpen] = useState(false);
-
-  const showModal = () => {
-    setLoginOpen(true);
-  };
-
   return (
     <div className="GamePage2">
-      <Header showModal={showModal} />
-      {loginOpen && <Login setLoginOpen={setLoginOpen} />}
+      <Header />
       <Grid container columns={2} stackable>
         <Grid.Row className="game1">
           <Grid.Column>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../images/logo.png";
 
 import "../styles/Footer.scss";
 
@@ -7,9 +8,9 @@ const Footer = () => {
   return (
     <footer className="Footer">
       <div className="LogoBox">
-        <img src="/images/logo.png" alt="logo"></img>
+        <img src={Logo} alt="logo"></img>
         <Link to="/" className="logo">
-          점심의 민족
+          맛ZIP
         </Link>
       </div>
       <div className="contentsLink">

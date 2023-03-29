@@ -25,15 +25,19 @@
     cursor: pointer;
     font-size: 1.2rem;
     font-weight: 900;
+    color: black;
   }
+
   .menu-item:hover {
     color: #faab78;
     text-shadow: 2px 2px 2px #faab78;
   }
+
   .logo {
     cursor: pointer;
     font-size: 1.2rem;
     font-weight: 800;
+    color: black;
 
     &:hover {
       color: black;
@@ -44,6 +48,7 @@
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px 10px;
+    color: black;
 
     &:hover {
       background-color: #faab78;
