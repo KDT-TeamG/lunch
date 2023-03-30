@@ -7,6 +7,7 @@ import GamePage2 from "./pages/GamePage2";
 import MainPage from "./pages/MainPage";
 import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
+import like from "./images/like.png";
 
 function App() {
   // 임시데이터
@@ -16,36 +17,42 @@ function App() {
       place_name: "음식점 명",
       road_address_name: "주소",
       category: "한식",
+      like: like,
     },
     {
       img: "사진 들어갈 곳",
       place_name: "음식점 명",
       road_address_name: "주소",
       category: "한식",
+      like: like,
     },
     {
       img: "사진 들어갈 곳",
       place_name: "음식점 명",
       road_address_name: "주소",
       category: "중식",
+      like: like,
     },
     {
       img: "사진 들어갈 곳",
       place_name: "음식점 명",
       road_address_name: "주소",
       category: "일식",
+      like: like,
     },
     {
       img: "사진 들어갈 곳",
       place_name: "음식점 명",
       road_address_name: "주소",
       category: "양식",
+      like: like,
     },
     {
       img: "사진 들어갈 곳",
       place_name: "음식점 명",
       road_address_name: "주소",
       category: "고기",
+      like: like,
     },
   ]);
 
