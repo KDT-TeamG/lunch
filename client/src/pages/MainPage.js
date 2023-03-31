@@ -3,13 +3,11 @@ import Search from "../components/MainPage/Search";
 import Main from "../components/MainPage/Main";
 import SideBar from "../components/SideBar/SideBar";
 
-const MainPage = (props) => {
-  const { cardItems } = props;
-
+const MainPage = () => {
   return (
     <main className="MainPage">
       <Main />
-      <Search cardItems={cardItems} />
+      <Search />
       <SideBar />
     </main>
   );
