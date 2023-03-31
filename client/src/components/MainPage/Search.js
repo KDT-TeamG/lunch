@@ -1,12 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import liked from "../../images/liked.png";
 import like from "../../images/like.png";
-
 import { Search, Grid } from "semantic-ui-react";
+import { cardItems } from "../../data";
 import "./Search.scss";
 
-const SearchScetion = (props) => {
-  const { cardItems } = props;
+const SearchScetion = () => {
   const [likeClick, setLikeClick] = useState(false);
 
   const listItem = ["전체", "한식", "중식", "일식", "양식"];
@@ -16,7 +15,7 @@ const SearchScetion = (props) => {
 
   useEffect(() => {
     lists.current[0].classList.add("active");
-  }, [lists, cards]);
+  }, [lists]);
 
   const click = (e) => {
     lists.current.forEach((item) => {
@@ -42,6 +41,7 @@ const SearchScetion = (props) => {
       e.target.setAttribute("src", liked);
     }
   };
+
   return (
     <section className="Search">
       {/* href를 통한 구역 이동시 검색바가 header에 가려지는 것을 막기 위한 div */}
@@ -72,21 +72,24 @@ const SearchScetion = (props) => {
       {/* 음식점 리스트 */}
       <div className="Cards">
         <div className="cardBox">
-          {cardItems.map((items, i) => {
+          {cardItems.map((item, idx) => {
             return (
-              <div className="card" key={i}>
-                <div className="CardList" ref={(el) => (cards.current[i] = el)}>
+              <div className="card" key={idx}>
+                <div
+                  className="CardList"
+                  ref={(el) => (cards.current[idx] = el)}
+                >
                   <div className="imgContent">
-                    <img src={items.img} className="items_img" alt="img" />
+                    <img src={item.img} className="items_img" alt="img" />
                   </div>
                   <div className="cardContent">
-                    <div className="place_name">{items.place_name}</div>
-                    <div className="category">{items.category}</div>
+                    <div className="place_name">{item.place_name}</div>
+                    <div className="category">{item.category}</div>
                     <div className="road_address_name">
-                      {items.road_address_name}
+                      {item.road_address_name}
                     </div>
                     <img
-                      src={items.like}
+                      src={like}
                       alt="like"
                       className="likeImg"
                       onClick={handleLike}
