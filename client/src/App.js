@@ -11,46 +11,6 @@ import { isMobile } from "react-device-detect";
 import MobileView from "./pages/MobileView/MobileView";
 
 function App() {
-  // 임시데이터
-  const [cardItems] = useState([
-    {
-      img: "사진 들어갈 곳",
-      place_name: "음식점 명",
-      road_address_name: "주소",
-      category: "한식",
-    },
-    {
-      img: "사진 들어갈 곳",
-      place_name: "음식점 명",
-      road_address_name: "주소",
-      category: "한식",
-    },
-    {
-      img: "사진 들어갈 곳",
-      place_name: "음식점 명",
-      road_address_name: "주소",
-      category: "중식",
-    },
-    {
-      img: "사진 들어갈 곳",
-      place_name: "음식점 명",
-      road_address_name: "주소",
-      category: "일식",
-    },
-    {
-      img: "사진 들어갈 곳",
-      place_name: "음식점 명",
-      road_address_name: "주소",
-      category: "양식",
-    },
-    {
-      img: "사진 들어갈 곳",
-      place_name: "음식점 명",
-      road_address_name: "주소",
-      category: "고기",
-    },
-  ]);
-
   return (
     <div className="App">
       {isMobile ? (
@@ -59,7 +19,7 @@ function App() {
         <BrowserRouter>
           <Header />
           <Routes>
-            <Route path="/" element={<MainPage cardItems={cardItems} />} />
+            <Route path="/" element={<MainPage />} />
             <Route path="/game" element={<GamePage2 />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="*" element={<NotFound />} />
@@ -67,7 +27,7 @@ function App() {
           <Footer />
         </BrowserRouter>
       )}
-    </div>
+      </div>
   );
 }
 

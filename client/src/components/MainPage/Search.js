@@ -1,10 +1,12 @@
-import React, { useRef, useEffect } from "react";
-
+import React, { useRef, useEffect, useState } from "react";
+import liked from "../../images/liked.png";
+import like from "../../images/like.png";
 import { Search, Grid } from "semantic-ui-react";
+import { cardItems } from "../../data";
 import "./Search.scss";
 
-const SearchScetion = (props) => {
-  const { cardItems } = props;
+const SearchScetion = () => {
+  const [likeClick, setLikeClick] = useState(false);
 
   const listItem = ["전체", "한식", "중식", "일식", "양식"];
 
@@ -12,9 +14,8 @@ const SearchScetion = (props) => {
   const cards = useRef([]);
 
   useEffect(() => {
-    console.log("lists", lists);
     lists.current[0].classList.add("active");
-  }, [lists, cards]);
+  }, [lists]);
 
   const click = (e) => {
     lists.current.forEach((item) => {
@@ -30,6 +31,15 @@ const SearchScetion = (props) => {
         list.parentNode.classList.add("hidden");
       }
     });
+  };
+
+  const handleLike = (e) => {
+    setLikeClick(!likeClick);
+    if (!likeClick) {
+      e.target.setAttribute("src", like);
+    } else if (likeClick) {
+      e.target.setAttribute("src", liked);
+    }
   };
 
   return (
@@ -62,40 +72,28 @@ const SearchScetion = (props) => {
       {/* 음식점 리스트 */}
       <div className="Cards">
         <div className="cardBox">
-          {cardItems.map((items, i) => {
+          {cardItems.map((item, idx) => {
             return (
-              // <Card key={i}>
-              //   <div className="CardList" ref={(el) => (cards.current[i] = el)}>
-              //     <Image className="items_img" wrapped ui={false}>
-              //       {items.img}
-              //     </Image>
-              //     <Card.Content>
-              //       <Card.Header className="place_name">
-              //         {items.place_name}
-              //       </Card.Header>
-              //       <Card.Meta
-              //         className="category"
-              //         // ref={(el) => (cardsCategory.current[i] = el)}
-              //       >
-              //         {items.category}
-              //       </Card.Meta>
-              //       <Card.Description className="road_address_name">
-              //         {items.road_address_name}
-              //       </Card.Description>
-              //     </Card.Content>
-              //   </div>
-              // </Card>
-              <div className="card" key={i}>
-                <div className="CardList" ref={(el) => (cards.current[i] = el)}>
+              <div className="card" key={idx}>
+                <div
+                  className="CardList"
+                  ref={(el) => (cards.current[idx] = el)}
+                >
                   <div className="imgContent">
-                    <img src={items.img} className="items_img" alt="img" />
+                    <img src={item.img} className="items_img" alt="img" />
                   </div>
                   <div className="cardContent">
-                    <div className="place_name">{items.place_name}</div>
-                    <div className="category">{items.category}</div>
+                    <div className="place_name">{item.place_name}</div>
+                    <div className="category">{item.category}</div>
                     <div className="road_address_name">
-                      {items.road_address_name}
+                      {item.road_address_name}
                     </div>
+                    <img
+                      src={like}
+                      alt="like"
+                      className="likeImg"
+                      onClick={handleLike}
+                    />
                   </div>
                 </div>
               </div>
