@@ -1,0 +1,107 @@
+@import "../../utils";
+
+.card-section {
+  width: 88vw;
+  margin: auto;
+  margin-top: 100px;
+  position: relative;
+  top: 500px;
+}
+
+.fliter-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+ul.filter-list {
+  display: flex;
+
+  li {
+    margin: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+.card-box {
+  overflow-x: scroll;
+
+  padding: 15px;
+  height: 500px;
+  margin-top: 50px;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 40px;
+}
+
+.place-name {
+  margin-top: 10px;
+}
+
+.card-img {
+  margin: auto;
+  width: 250px;
+  height: 200px;
+}
+
+.items-img {
+  width: 100%;
+  height: 200px;
+  background-color: aquamarine;
+}
+
+.card-container {
+  width: 270px;
+  height: 300px;
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 5px 10px #a9a9a9;
+  }
+}
+
+.card {
+  margin: 1rem 0.5rem;
+}
+
+#blank {
+  height: 100px;
+  width: 100%;
+}
+
+.active {
+  color: #faab78;
+}
+
+.hidden {
+  display: none;
+}
+
+.card-info .like-img {
+  width: 20px;
+}
+
+.back-button {
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-size: 0.6rem;
+  cursor: pointer;
+  transition: all 0.8s ease;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+}

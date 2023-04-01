@@ -3,25 +3,30 @@ import { Link } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
-  const [time, setTime] = useState(new Date());
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const updateScroll = () => {
+    setScrollPosition(window.scrollY);
+    console.log(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", updateScroll);
+  }, []);
 
   const logout = () => {
     sessionStorage.clear();
   };
 
-  useEffect(() => {
-    const id = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
-    return () => clearInterval(id);
-  }, []);
   return (
-    <header className="Header">
-      <Link to="/" className="logo">
-        맛ZIP
-      </Link>
+    <header className={scrollPosition < 534 ? "header" : "header-scroll"}>
+      <div className="info">
+        <Link to="/" className="logo">
+          맛ZIP
+        </Link>
+        <Link className="about-us">ABOUT US</Link>
+      </div>
       <div className="menu-items">
-        <div className="clock">{time.toLocaleTimeString()}</div>
         <Link to="/game" className="menu-item">
           GAME
         </Link>
