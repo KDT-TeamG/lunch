@@ -7,13 +7,13 @@ import GamePage2 from "./pages/GamePage2";
 import MainPage from "./pages/MainPage";
 import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
-import { isMobile } from "react-device-detect";
-import MobileView from "./pages/MobileView/MobileView";
+import { isTablet, isBrowser } from "react-device-detect";
+import MobileView from "./pages/MobileView/MobileView.js";
 
 function App() {
   return (
     <div className="App">
-      {isMobile ? (
+      {!isTablet && !isBrowser ? (
         <MobileView />
       ) : (
         <BrowserRouter>
@@ -27,7 +27,7 @@ function App() {
           <Footer />
         </BrowserRouter>
       )}
-      </div>
+    </div>
   );
 }
 
