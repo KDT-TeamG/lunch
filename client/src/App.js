@@ -7,6 +7,8 @@ import GamePage2 from "./pages/GamePage2";
 import MainPage from "./pages/MainPage";
 import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
+import { isMobile } from "react-device-detect";
+import MobileView from "./pages/MobileView/MobileView";
 
 function App() {
   // 임시데이터
@@ -51,16 +53,20 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<MainPage cardItems={cardItems} />} />
-          <Route path="/game" element={<GamePage2 />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      {isMobile ? (
+        <MobileView />
+      ) : (
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<MainPage cardItems={cardItems} />} />
+            <Route path="/game" element={<GamePage2 />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      )}
     </div>
   );
 }

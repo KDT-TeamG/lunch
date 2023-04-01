@@ -1,0 +1,22 @@
+.MobileView {
+  display: flex;
+  //   margin: 0 auto;
+  //   position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  .faceImg {
+    // position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // margin: auto;
+    max-width: 80px;
+    max-height: 80px;
+  }
+  p {
+    color: #979191;
+  }
+}
