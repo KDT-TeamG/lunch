@@ -1,0 +1,43 @@
+@import "../../utils";
+
+.MainPage {
+  margin-bottom: 250px;
+}
+
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .intro-block {
+    position: absolute;
+  }
+}
+
+.intro {
+  width: 100vw;
+  height: 75vh;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+
+  .intro-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    p {
+      margin: 0 15px;
+    }
+  }
+}
+
+.search-bar {
+  position: relative;
+
+  .ui.search .prompt {
+    width: 400px;
+  }
+}
