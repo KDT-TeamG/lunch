@@ -7,7 +7,6 @@ const Header = () => {
 
   const updateScroll = () => {
     setScrollPosition(window.scrollY);
-    console.log(window.scrollY);
   };
 
   useEffect(() => {

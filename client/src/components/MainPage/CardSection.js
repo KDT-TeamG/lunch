@@ -6,6 +6,15 @@ import "./CardSection.scss";
 
 const SearchScetion = () => {
   const [likeClick, setLikeClick] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const updateScroll = () => {
+    setScrollPosition(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", updateScroll);
+  }, []);
 
   const listItem = ["전체", "한식", "중식", "일식", "양식"];
 
@@ -97,7 +106,10 @@ const SearchScetion = () => {
           })}
         </div>
       </div>
-      <button className="back-button" onClick={handleScrollToTop}>
+      <button
+        className={scrollPosition < 534 ? "back-button hidden" : "back-button"}
+        onClick={handleScrollToTop}
+      >
         Top
       </button>
     </section>
