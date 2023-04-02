@@ -31,13 +31,16 @@ const Header = () => {
           GAME
         </Link>
         {sessionStorage.getItem("userId") == null ? (
-          <Link to="/login" className="menu-item loginBtn">
+          <Link to="/login" className="menu-item login-btn">
             로그인
           </Link>
         ) : (
-          <button className="menu-item logoutBtn" onClick={logout}>
-            로그아웃
-          </button>
+          <>
+            <Link className="menu-item">My Page</Link>
+            <button className="menu-item logout-btn" onClick={logout}>
+              로그아웃
+            </button>
+          </>
         )}
       </div>
     </header>
