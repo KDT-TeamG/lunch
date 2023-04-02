@@ -3,18 +3,10 @@ import liked from "../../images/liked.png";
 import like from "../../images/like.png";
 import { cardItems } from "../../data";
 import "./CardSection.scss";
+import useScrollStatus from "../../hooks/useScrollStatus";
 
-const SearchScetion = () => {
+const SearchScetion = ({ props }) => {
   const [likeClick, setLikeClick] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  const updateScroll = () => {
-    setScrollPosition(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", updateScroll);
-  }, []);
 
   const listItem = ["전체", "한식", "중식", "일식", "양식"];
 
@@ -53,6 +45,8 @@ const SearchScetion = () => {
       e.target.setAttribute("src", liked);
     }
   };
+
+  const scrollPosition = useScrollStatus(props);
 
   return (
     <section className="card-section">
