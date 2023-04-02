@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import useScrollStatus from "../../hooks/useScrollStatus";
 import "./Header.scss";
 
-const Header = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  const updateScroll = () => {
-    setScrollPosition(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", updateScroll);
-  }, []);
+const Header = ({ props }) => {
+  const scrollPosition = useScrollStatus(props);
 
   const logout = () => {
     sessionStorage.clear();
