@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
 import { isTablet, isBrowser } from "react-device-detect";
 import MobileView from "./pages/MobileView/MobileView.js";
+import MyPage from "./pages/Mypage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<MainPage />} />
+            <Route path="/mypage" element={<MyPage />} />
             <Route path="/game" element={<GamePage2 />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="*" element={<NotFound />} />

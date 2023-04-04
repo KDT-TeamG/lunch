@@ -7,7 +7,7 @@ import bbq from "./images/bbq.jpg";
 import bhc from "./images/bhc.jpg";
 
 // 임시데이터
-export const cardItems = [
+export const cardItemDatas = [
   {
     id: 1,
     img: lotteria,

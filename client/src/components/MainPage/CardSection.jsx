@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import liked from "../../images/liked.png";
 import like from "../../images/like.png";
-import { cardItems } from "../../data";
+import { cardItemDatas } from "../../data";
 import "./CardSection.scss";
 import useScrollStatus from "../../hooks/useScrollStatus";
 
@@ -71,7 +71,7 @@ const SearchScetion = ({ props }) => {
       {/* 음식점 리스트 */}
       <div className="card-box">
         <div className="card-list">
-          {cardItems.map((item, idx) => {
+          {cardItemDatas.map((item, idx) => {
             return (
               <div className="card-container" key={idx}>
                 <div

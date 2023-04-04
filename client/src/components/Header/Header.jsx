@@ -1,17 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import useScrollStatus from "../../hooks/useScrollStatus";
+
 import "./Header.scss";
 
 const Header = ({ props }) => {
-  const scrollPosition = useScrollStatus(props);
-
   const logout = () => {
     sessionStorage.clear();
   };
 
   return (
-    <header className={scrollPosition < 534 ? "header" : "header-scroll"}>
+    <header className="header">
       <div className="info">
         <Link to="/" className="logo">
           맛ZIP
@@ -28,7 +26,9 @@ const Header = ({ props }) => {
           </Link>
         ) : (
           <>
-            <Link className="menu-item">My Page</Link>
+            <Link to="/mypage" className="menu-item">
+              My Page
+            </Link>
             <button className="menu-item logout-btn" onClick={logout}>
               로그아웃
             </button>

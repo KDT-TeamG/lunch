@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.496);
   z-index: 10;
   color: white;
 
@@ -50,70 +50,6 @@
 
   .login-btn,
   .logout-btn {
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: white;
-    font-weight: 700;
-
-    &:hover {
-      background-color: #faab78;
-      border: 1px solid #faab78;
-      color: white;
-    }
-  }
-}
-
-.header-scroll {
-  display: flex;
-  box-sizing: border-box;
-  justify-content: space-between;
-  align-items: center;
-  height: 63px;
-  padding: 0 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: black;
-  z-index: 10;
-  color: white;
-
-  .menu-items {
-    display: flex;
-    align-items: center;
-  }
-  .menu-item {
-    margin: 0 8px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: white;
-  }
-
-  .menu-item:hover {
-    color: #faab78;
-  }
-
-  .logo,
-  .about-us {
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: white;
-    margin: 0 15px;
-
-    &:hover {
-      color: #faab78;
-    }
-  }
-
-  .logo:hover {
-    color: white;
-  }
-
-  .loginBtn,
-  .logoutBtn {
     border: 1px solid white;
     border-radius: 5px;
     padding: 5px 10px;

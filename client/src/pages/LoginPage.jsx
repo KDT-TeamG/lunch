@@ -61,19 +61,19 @@ const LoginPage = () => {
 
   const loginShow = (e, { name }) => {
     setActiveItem(name);
-    signupElement.innerText = "";
-    signUpNameInput.current.value = "";
-    signUpIdInput.current.value = "";
-    signUpPwInput.current.value = "";
+    // signupElement.innerText = "";
+    // signUpNameInput.current.value = "";
+    // signUpIdInput.current.value = "";
+    // signUpPwInput.current.value = "";
     signupForm.current.style.display = "none";
     loginForm.current.style.display = "block";
   };
 
   const signupShow = (e, { name }) => {
     setActiveItem(name);
-    loginElement.innerText = "";
-    loginIdInput.current.value = "";
-    loginPwInput.current.value = "";
+    // loginElement.innerText = "";
+    // loginIdInput.current.value = "";
+    // loginPwInput.current.value = "";
     loginForm.current.style.display = "none";
     signupForm.current.style.display = "block";
   };
