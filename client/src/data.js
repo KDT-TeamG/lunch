@@ -1,4 +1,4 @@
-import like from "./images/like.png";
+// import like from "./images/like.png";
 import lotteria from "./images/lotteria.jpg";
 import mcdonalds from "./images/mcdonald's.jpg";
 import moms from "./images/mom's.jpg";
@@ -14,7 +14,7 @@ export const cardItems = [
     place_name: "롯데리아",
     road_address_name: "주소",
     category: "한식",
-    like: like,
+    like: false,
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ export const cardItems = [
     place_name: "맥도날드",
     road_address_name: "주소",
     category: "한식",
-    like: like,
+    like: false,
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const cardItems = [
     place_name: "맘스터치",
     road_address_name: "주소",
     category: "중식",
-    like: like,
+    like: false,
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ export const cardItems = [
     place_name: "버거킹",
     road_address_name: "주소",
     category: "일식",
-    like: like,
+    like: false,
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ export const cardItems = [
     place_name: "bbq",
     road_address_name: "주소",
     category: "양식",
-    like: like,
+    like: false,
   },
   {
     id: 6,
@@ -54,6 +54,6 @@ export const cardItems = [
     place_name: "bhc",
     road_address_name: "주소",
     category: "고기",
-    like: like,
+    like: false,
   },
 ];
