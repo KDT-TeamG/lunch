@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import Dice from "../components/Dice/Dice.js";
+import Dice from "../components/Dice/Dice.jsx";
 import { Grid, Image, Button } from "semantic-ui-react";
 import { useState } from "react";
 import couponImg from "../images/coupon3.png";

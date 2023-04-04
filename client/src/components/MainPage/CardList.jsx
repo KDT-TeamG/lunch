@@ -1,52 +1,39 @@
 import React, { Fragment } from "react";
 import { ProductConsumer } from "../../contexts/ProductProvider";
-import styled from "styled-components";
 import likeImg from "../../images/like.png";
 import likedImg from "../../images/liked.png";
+import "../MainPage/CardSection.scss";
 
-const CardList = ({ cardItem }) => {
-  //   console.log(cardItem);
+const CardList = ({ cardItem, cardref }) => {
   const { id, img, place_name, road_address_name, category, like } = cardItem;
   return (
-    <CardBlock>
+    <div className="card-container">
       <ProductConsumer>
         {(value) => (
           <Fragment>
-            <img
-              src={img}
-              alt="storeImg"
-              style={{
-                width: "200px",
-                height: "150px",
-              }}
-            />
-            <div>{place_name}</div>
-            <div>{category}</div>
-            <div>{road_address_name}</div>
-            <img
-              src={like ? likedImg : likeImg}
-              alt="like"
-              style={{
-                width: "20px",
-                cursor: "pointer",
-              }}
+            <div className="card-img">
+              <img src={img} alt="storeImg" />
+            </div>
+            <div className="card-info">
+              <div>{place_name}</div>
+              <div ref={(el) => (cardref.current[id] = el)}>{category}</div>
+              <div>{road_address_name}</div>
+            </div>
+            <button
               onClick={() => value.addMypage(id)}
-            />
+              disabled={like ? true : false}
+            >
+              <img
+                src={like ? likedImg : likeImg}
+                alt="like"
+                className="like-img"
+              />
+            </button>
           </Fragment>
         )}
       </ProductConsumer>
-    </CardBlock>
+    </div>
   );
 };
 
 export default CardList;
-
-const CardBlock = styled.div`
-  display: inline-block;
-  //   width: 270px;
-  height: 300px;
-  background-color: #fff;
-  border: 0.2rem solid black;
-  padding: 1rem;
-  margin: 10px 5px;
-`;

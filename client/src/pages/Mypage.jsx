@@ -9,6 +9,7 @@ const MyPage = () => {
     <main>
       <Header />
       <LikeItemSection>
+        <div>좋아요 누른 맛집</div>
         <ProductConsumer>
           {(value) => {
             const { myPage } = value;
@@ -27,4 +28,6 @@ export default MyPage;
 const LikeItemSection = styled.section`
   position: relative;
   top: 100px;
+  width: 90%;
+  margin: auto;
 `;

@@ -9,7 +9,7 @@ import bhc from "./images/bhc.jpg";
 // 임시데이터
 export const cardItemDatas = [
   {
-    id: 1,
+    id: 0,
     img: lotteria,
     place_name: "롯데리아",
     road_address_name: "주소",
@@ -17,7 +17,7 @@ export const cardItemDatas = [
     like: false,
   },
   {
-    id: 2,
+    id: 1,
     img: mcdonalds,
     place_name: "맥도날드",
     road_address_name: "주소",
@@ -25,7 +25,7 @@ export const cardItemDatas = [
     like: false,
   },
   {
-    id: 3,
+    id: 2,
     img: moms,
     place_name: "맘스터치",
     road_address_name: "주소",
@@ -33,7 +33,7 @@ export const cardItemDatas = [
     like: false,
   },
   {
-    id: 4,
+    id: 3,
     img: burgerking,
     place_name: "버거킹",
     road_address_name: "주소",
@@ -41,7 +41,7 @@ export const cardItemDatas = [
     like: false,
   },
   {
-    id: 5,
+    id: 4,
     img: bbq,
     place_name: "bbq",
     road_address_name: "주소",
@@ -49,7 +49,7 @@ export const cardItemDatas = [
     like: false,
   },
   {
-    id: 6,
+    id: 5,
     img: bhc,
     place_name: "bhc",
     road_address_name: "주소",

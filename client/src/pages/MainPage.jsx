@@ -1,15 +1,13 @@
 import React from "react";
-// import CardSection from "../components/MainPage/CardSection";
 import IntroSection from "../components/MainPage/IntroSection";
 import SideBar from "../components/SideBar/SideBar";
-import Cardsec from "../components/MainPage/Cardsec";
+import CardSection from "../components/MainPage/CardSection";
 
 const MainPage = () => {
   return (
     <main className="MainPage">
       <IntroSection />
-      <Cardsec />
-      {/* <CardSection /> */}
+      <CardSection />
       <SideBar />
     </main>
   );

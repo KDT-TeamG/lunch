@@ -23,4 +23,10 @@ export default MyPageItem;
 
 const LikeItem = styled.div`
   display: inline-block;
+  //   width: 270px;
+  height: 300px;
+  background-color: #fff;
+  border: 0.2rem solid black;
+  padding: 1rem;
+  margin: 10px 5px;
 `;
