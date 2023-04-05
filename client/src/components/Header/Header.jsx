@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Header.scss";
 
 const Header = () => {
+  const [isLogin, setIsLogin] = useState(false);
+
+  useEffect(() => {
+    if (sessionStorage.getItem("userId") == null) {
+      console.log("is Login :", isLogin);
+    } else {
+      setIsLogin(true);
+    }
+  }, [isLogin]);
+
   const logout = () => {
     sessionStorage.clear();
+    document.location.href = "/";
   };
 
   return (
@@ -20,7 +31,7 @@ const Header = () => {
         <Link to="/game" className="menu-item">
           GAME
         </Link>
-        {sessionStorage.getItem("userId") == null ? (
+        {!isLogin ? (
           <Link to="/login" className="menu-item login-btn">
             로그인
           </Link>
