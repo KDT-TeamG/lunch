@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const MyPageItem = ({ item }) => {
+const MyPageItem = ({ item, value }) => {
   const { id, img, placeName, address, category } = item;
+  const { removeItem } = value;
   return (
     <LikeItem>
       <img
@@ -15,6 +18,9 @@ const MyPageItem = ({ item }) => {
       <div>{placeName}</div>
       <div>{category}</div>
       <div>{address}</div>
+      <div>
+        <FontAwesomeIcon icon={faTrash} onClick={() => removeItem(id)} />
+      </div>
     </LikeItem>
   );
 };
