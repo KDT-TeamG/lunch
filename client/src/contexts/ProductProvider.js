@@ -6,6 +6,7 @@ const ProductContext = React.createContext();
 const ProductProvider = ({ children }) => {
   const [cardItems, setCardItems] = useState([]);
   const [myPage, setMyPage] = useState([]);
+  const [isModal, setIsModal] = useState(false);
 
   useEffect(() => {
     handleSetCardItems();
@@ -30,9 +31,10 @@ const ProductProvider = ({ children }) => {
     const index = tempCardItems.indexOf(getItem(id));
     const cardItem = tempCardItems[index];
     cardItem.like = true;
-
     setCardItems(tempCardItems);
+    console.log(cardItem);
     setMyPage([...myPage, cardItem]);
+    setIsModal(true);
   };
 
   return (
@@ -40,7 +42,10 @@ const ProductProvider = ({ children }) => {
       value={{
         cardItems,
         myPage,
+        isModal,
+
         addMypage,
+        setIsModal,
       }}
     >
       {children}
