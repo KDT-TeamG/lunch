@@ -10,6 +10,7 @@ import LoginPage from "./pages/LoginPage";
 import { isTablet, isBrowser } from "react-device-detect";
 import MobileView from "./pages/MobileView/MobileView.js";
 import MyPage from "./pages/Mypage";
+import Modal from "./components/Modal";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <Modal />
           <Footer />
         </BrowserRouter>
       )}

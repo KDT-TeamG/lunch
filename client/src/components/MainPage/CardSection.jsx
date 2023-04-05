@@ -6,7 +6,7 @@ import styled from "styled-components";
 import "../MainPage/CardSection.scss";
 import useScrollStatus from "../../hooks/useScrollStatus";
 
-const Cardsec = ({ props }) => {
+const CardSection = ({ props }) => {
   const listItem = ["전체", "한식", "중식", "일식", "양식"];
   const lists = useRef([]);
   const cards = useRef([]);
@@ -39,7 +39,7 @@ const Cardsec = ({ props }) => {
   };
 
   return (
-    <CardSection>
+    <CardSec>
       <div className="filter">
         <ul className="filter-list">
           {listItem.map((item, idx) => (
@@ -80,13 +80,13 @@ const Cardsec = ({ props }) => {
       >
         Top
       </button>
-    </CardSection>
+    </CardSec>
   );
 };
 
-export default Cardsec;
+export default CardSection;
 
-const CardSection = styled.section`
+const CardSec = styled.section`
   width: 90vw;
   margin: auto;
   margin-top: 100px;

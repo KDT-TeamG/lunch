@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 import "./Header.scss";
 
 const Header = () => {
+  const authConsumer = useContext(AuthContext);
+  // const [isLogin, setIsLogin] = useState(false);
+  const { userLogin } = authConsumer;
+
+  useEffect(() => {
+    if (sessionStorage.getItem("userId") == null) {
+      console.log("is Login :", !userLogin);
+    } else {
+      authConsumer.setIsLogin(userLogin);
+    }
+  }, [userLogin, authConsumer]);
+
   const logout = () => {
     sessionStorage.clear();
+    document.location.href = "/";
   };
 
   return (
@@ -20,7 +34,7 @@ const Header = () => {
         <Link to="/game" className="menu-item">
           GAME
         </Link>
-        {sessionStorage.getItem("userId") == null ? (
+        {!userLogin ? (
           <Link to="/login" className="menu-item login-btn">
             로그인
           </Link>

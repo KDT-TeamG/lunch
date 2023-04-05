@@ -3,8 +3,12 @@ import { ProductConsumer } from "../contexts/ProductProvider";
 // import { Grid } from "semantic-ui-react";
 import styled from "styled-components";
 import Header from "../components/Header/Header";
+import { useEffect } from "react";
 
 const MyPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  });
   return (
     <main>
       <Header />

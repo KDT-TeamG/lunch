@@ -5,23 +5,24 @@ import likedImg from "../../images/liked.png";
 import "../MainPage/CardSection.scss";
 
 const CardList = ({ cardItem, cardref }) => {
-  const { id, img, place_name, road_address_name, category, like } = cardItem;
+  const { id, img, placeName, address, category, like } = cardItem;
   return (
     <div className="card-container">
       <ProductConsumer>
         {(value) => (
           <Fragment>
             <div className="card-img">
-              <img src={img} alt="storeImg" />
+              <img src={img} alt="store-img" />
             </div>
             <div className="card-info">
-              <div>{place_name}</div>
+              <div className="place-name">{placeName}</div>
               <div ref={(el) => (cardref.current[id] = el)}>{category}</div>
-              <div>{road_address_name}</div>
+              <div>{address}</div>
             </div>
             <button
               onClick={() => value.addMypage(id)}
               disabled={like ? true : false}
+              className="like-btn"
             >
               <img
                 src={like ? likedImg : likeImg}

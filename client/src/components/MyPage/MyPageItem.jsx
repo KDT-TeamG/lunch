@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const MyPageItem = ({ item }) => {
-  const { id, img, place_name, road_address_name, category } = item;
+  const { id, img, placeName, address, category } = item;
   return (
     <LikeItem>
       <img
@@ -12,9 +12,9 @@ const MyPageItem = ({ item }) => {
           height: "150px",
         }}
       />
-      <div>{place_name}</div>
+      <div>{placeName}</div>
       <div>{category}</div>
-      <div>{road_address_name}</div>
+      <div>{address}</div>
     </LikeItem>
   );
 };
