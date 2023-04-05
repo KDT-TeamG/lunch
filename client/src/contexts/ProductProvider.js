@@ -41,6 +41,18 @@ const ProductProvider = ({ children }) => {
     setIsModal(true);
   };
 
+  const removeItem = (id) => {
+    let tempCardItems = cardItems;
+    let tempMypage = myPage;
+    tempMypage = tempMypage.filter((item) => item.id !== id);
+
+    const index = tempCardItems.indexOf(getItem(id));
+    let removeItems = tempCardItems[index];
+    removeItems.like = false;
+    setMyPage(tempMypage);
+    setCardItems(tempCardItems);
+  };
+
   return (
     <ProductContext.Provider
       value={{
@@ -50,6 +62,7 @@ const ProductProvider = ({ children }) => {
 
         addMypage,
         setIsModal,
+        removeItem,
       }}
     >
       {children}

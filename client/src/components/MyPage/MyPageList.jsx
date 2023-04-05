@@ -9,7 +9,7 @@ const MyPageList = ({ value }) => {
         <Grid.Row>
           <Grid.Column>
             {myPage.map((item) => {
-              return <MyPageItem key={item.id} item={item} />;
+              return <MyPageItem key={item.id} item={item} value={value} />;
             })}
           </Grid.Column>
         </Grid.Row>
