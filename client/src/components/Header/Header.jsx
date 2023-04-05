@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 import "./Header.scss";
 
 const Header = () => {
-  const [isLogin, setIsLogin] = useState(false);
+  const authConsumer = useContext(AuthContext);
+  // const [isLogin, setIsLogin] = useState(false);
+  const { userLogin } = authConsumer;
 
   useEffect(() => {
     if (sessionStorage.getItem("userId") == null) {
-      console.log("is Login :", isLogin);
+      console.log("is Login :", !userLogin);
     } else {
-      setIsLogin(true);
+      authConsumer.setIsLogin(userLogin);
     }
-  }, [isLogin]);
+  }, [userLogin, authConsumer]);
 
   const logout = () => {
     sessionStorage.clear();
@@ -31,7 +34,7 @@ const Header = () => {
         <Link to="/game" className="menu-item">
           GAME
         </Link>
-        {!isLogin ? (
+        {!userLogin ? (
           <Link to="/login" className="menu-item login-btn">
             로그인
           </Link>

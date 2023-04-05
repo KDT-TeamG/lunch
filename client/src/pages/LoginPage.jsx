@@ -1,9 +1,12 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Segment, Form, Button } from "semantic-ui-react";
 import "./LoginPage.scss";
 
 const LoginPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  });
   const loginForm = useRef();
   const signupForm = useRef();
   const [activeItem, setActiveItem] = useState("login");
