@@ -67,25 +67,6 @@ const GamePage2 = () => {
           </Grid.Column>
         </Grid.Row>
         <Grid.Row className="game2" centered>
-          {/* <ScratchCard /> */}
-          {/* <Grid.Column> */}
-          {/* <Image src={map} className="bgimgMap" /> */}
-          {/* <div className="imgContainer">
-            
-              <Image
-                src={couponImg}
-                centered
-                // verticalAlign="middle"
-                id="couponImg"
-              />
-              <Image src={mouseImg2} size="tiny" centered id="mouseImg" />{" "}
-              <Image
-                src={yayImg2}
-                size="small"
-                // verticalAlign="bottom"
-                id="yayImg"
-              />
-            </div> */}
           <div className="imgContainer">
             <Image src={couponImg} />
           </div>
