@@ -1,0 +1,94 @@
+@import "../../utils";
+
+// 필터
+.fliter-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+ul.filter-list {
+  display: flex;
+
+  li {
+    margin: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+// 카드
+.card-container {
+  display: inline-block;
+  height: 300px;
+  padding: 1rem;
+  margin: 10px 5px;
+  background: #eee;
+  // border: 0.2rem solid black;
+  // border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px #a9a9a9;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.card-list {
+  margin: auto;
+}
+
+.card-info {
+  div {
+    margin: 5px 0;
+  }
+  .place-name {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+}
+
+.card-img {
+  margin: auto;
+  border-bottom: 1px solid black;
+
+  img {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+.place-name {
+  margin-top: 10px;
+}
+
+.active {
+  color: #faab78;
+}
+
+.hidden {
+  display: none;
+}
+
+.like-btn {
+  position: relative;
+  left: 180px;
+  .like-img {
+    width: 20px;
+  }
+}
+
+.back-button {
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-size: 0.6rem;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+}
