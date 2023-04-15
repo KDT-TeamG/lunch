@@ -1,4 +1,3 @@
-// import like from "./images/like.png";
 import lotteria from "./images/lotteria.jpg";
 import mcdonalds from "./images/mcdonald's.jpg";
 import moms from "./images/mom's.jpg";
