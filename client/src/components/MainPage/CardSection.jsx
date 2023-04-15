@@ -86,6 +86,4 @@ const CardSec = styled.section`
   width: 90vw;
   margin: auto;
   margin-top: 100px;
-  position: relative;
-  top: 550px;
 `;
