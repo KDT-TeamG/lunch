@@ -1,10 +1,10 @@
 import { useRef, useEffect } from "react";
 import { ProductConsumer } from "../../contexts/ProductProvider";
 import CardList from "./CardList";
-import { Grid } from "semantic-ui-react";
 import styled from "styled-components";
 import "../MainPage/CardSection.scss";
 import useScrollStatus from "../../hooks/useScrollStatus";
+import Card from "../Card";
 
 const CardSection = ({ props }) => {
   const listItem = ["전체", "한식", "중식", "일식", "양식"];
@@ -53,27 +53,23 @@ const CardSection = ({ props }) => {
           ))}
         </ul>
       </div>
-      <Grid columns="equal">
-        <Grid.Row>
-          <Grid.Column>
-            <CardFlex>
-              <ProductConsumer>
-                {(value) => {
-                  return value.cardItems.map((cardItem) => {
-                    return (
-                      <CardList
-                        key={cardItem.id}
-                        cardItem={cardItem}
-                        cardref={cards}
-                      />
-                    );
-                  });
-                }}
-              </ProductConsumer>
-            </CardFlex>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+      <Card
+        cardContainer={
+          <ProductConsumer>
+            {(value) => {
+              return value.cardItems.map((cardItem) => {
+                return (
+                  <CardList
+                    key={cardItem.id}
+                    cardItem={cardItem}
+                    cardref={cards}
+                  />
+                );
+              });
+            }}
+          </ProductConsumer>
+        }
+      />
       <button
         className={scrollPosition < 534 ? "back-button hidden" : "back-button"}
         onClick={handleScrollToTop}
@@ -92,9 +88,4 @@ const CardSec = styled.section`
   margin-top: 100px;
   position: relative;
   top: 550px;
-`;
-
-const CardFlex = styled.div`
-  width: 95%;
-  margin: auto;
 `;
